@@ -1,0 +1,80 @@
+
+
+
+
+
+ARQUIVO HTML  NOME : INDEX.HTML
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário Produto</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+        <body>
+            <style>
+            body {
+              background-image: url('fundo2.png');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+                background-size: cover;
+            }
+            </style>
+            <nav class="navbar navbar-expand-lg navbar-light  w-100 h-50"style="background-color:#FF6347">
+                <a class="navbar-brand "  style="margin-left:40%;">Responda o Formulário Abaixo</a>
+              </nav>
+
+              <form  style="margin-top: 10%;">
+                <div class="form-group mt-5 mb-2"style="margin-left:31%;margin-right:32%;">
+                  <label for="nome" >Produto</label>
+                  <input type="text" class="form-control" name="nome" id="nome" placeholder="Exemplo : Amaciante Veja" style="background-color: coral;">
+                </div>
+                <div class="form-group mt-3" style="margin-left:31%;margin-right:32%;">
+                    <label for="quant" >Quantidade</label>
+                    <input type="number" class="form-control" name="quant" id="quant" placeholder="Exemplo : 2" style="background-color: coral;">
+                  </div>
+                    <div class="form-group mt-3" style="margin-left:31%;margin-right:32%;">
+                      <label for="valor" >Valor</label>
+                      <input type="number" class="form-control" name="Valor" id="valor" placeholder="Exemplo : 12,50" style="background-color: coral;">
+                    </div>
+                    <div class="form-group" style="margin-left:31%;margin-right:32%;">
+                        <label for="categoria" >Categoria</label>
+                        <select class="form-control" nome="categoria" id="categoria"style="background-color: coral;">
+                          <option>Escolha....</option>
+                          <option value="Eletrodomésticos">Eletrodomésticos</option>
+                          <option value="Alimento">Alimento</option>
+                          <option value="higiene Pessoal">higiene Pessoal</option>
+                          <option value="Eletronico">Eletronico</option>
+                          <option value="Limpeza">Limpeza</option>
+                        </select>
+                    <input class="btn btn-outline-warning btn-lg mt-3" type="submit" value="Salvar" onclick="print()">  
+              </form>
+
+            <script src="produto.js"></script>
+        </body>
+</html>
+
+ARQUIVO JS NOME : Produto.js
+
+ 
+
+function print(){ 
+
+    var nome = document.getElementById('nome').value; 
+
+    var quant = document.getElementById('quant').value; 
+
+    var valor = document.getElementById('valor').value; 
+
+    var categoria = document.getElementById('categoria').value; 
+
+ 
+
+    alert("Nome : "+nome + "\n Quantidade : "+quant+ "\n Valor : "+valor+"\n Categoria : "+categoria); 
+
+
+} 
+
+ 
